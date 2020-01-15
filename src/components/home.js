@@ -38,8 +38,9 @@ class home extends Component {
         return (
             <div> Child
                name {this.props.name} <br />
-                age state {this.state.age}
-                <button onClick={this.updateParent}>update age</button>
+                age state {this.state.age } 
+                <button onClick={this.updateParent}>update age</button><br></br>
+                <strong> {this.props.count %2==0?"Even No": "Odd No" }</strong>
 
             </div>
         );
