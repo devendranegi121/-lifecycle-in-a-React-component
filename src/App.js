@@ -11,14 +11,14 @@ class app extends Component {
           age:0,
           count:0
       })
-      console.log(" constructor call Parent");
+      console.log(" constructor call Parent one time call only");
       this.updateTime=this.updateTime.bind(this);
   }
   
   componentDidMount() {
    
      this.updateTime();
-    console.log('componentDidMount');
+    console.log('componentDidMount one time call only');
     console.log('=================================================');
 }
 

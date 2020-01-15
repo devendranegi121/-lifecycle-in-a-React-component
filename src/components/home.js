@@ -8,10 +8,10 @@ class home extends Component {
         this.state = ({
             age: 0
         })
-        console.log("Constructor call child")
+        console.log("Constructor call child one time call only")
     }
     static getDerivedStateFromProps(nextProps,oldstate) {
-        console.log("getDerivedStateFromProps " + nextProps.count);
+        console.log("getDerivedStateFromProps every time call when state and props will update " + nextProps.count);
         return {
           age: nextProps.age,
         };
@@ -23,14 +23,14 @@ class home extends Component {
    
         
     shouldComponentUpdate(nextProps, nextState) {
-        console.log("shouldComponentUpdate "+ nextProps.age );
+        console.log("shouldComponentUpdate every time call when state and props will update "+ nextProps.age );
         return true;
     }
 
     
 
     componentDidUpdate(prevProps, prevState) {
-        console.log("componentDidUpdate");
+        console.log("componentDidUpdate every time call when state and props will update ");
         console.log('=================================================');
     }
 
